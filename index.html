@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <a href="index.html">Sign Up</a>
+    <a href="Signin.html">Sign In</a>
+
+
+
+    <form class="login" action="#"onsubmit="return signup()">
+Name:<input type="text" id="names" placeholder="Name"><br>
+Email:<input type="email" id="email" placeholder="Email"><br>
+Password:<input type="password" id="password" placeholder="password"><br><br>
+<button >Sign Up</button> <br>
+
+
+
+    </form>
+    <script>
+   var names = [];
+        var emails = [];
+        var passwords = [];
+
+        function signup() {
+
+
+            names.push(document.getElementById("names").value );
+            emails.push(document.getElementById("email").value);
+            passwords.push(document.getElementById("password").value);
+
+            localStorage.setItem("names", JSON.stringify(names));
+            localStorage.setItem("email", JSON.stringify(emails));
+            localStorage.setItem("password", JSON.stringify(passwords));
+
+            alert("signup success");
+
+            window.location.href = "./signin.html";
+            return false;
+        }
+
+
+    </script>
+</body>
+</html>
