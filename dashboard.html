@@ -9,14 +9,22 @@
 <body>
     <a href="index.html">Log Out</a><br><br>
     <h1>User Data</h1>
-    <h1 id="names"><label>Names:</label> </h1>
-    <h1 id="email"><label>Email:</label></h1>
-    <h1 id="password"><label>Password</label></h1>
+    <label>Names:</label> <h1 id="name"> </h1>
+    <label>Email:</label> <h1 id="email"></h1>
+    <label>Password</label><h1 id="password"></h1>
+    <label>Age:</label> <h1 id="number"></h1>
+    <label>Nationalty:</label> <h1 id="text"></h1>
+    <label>Roll No:</label><h1 id="rollno"></h1>
+    <label>Gender:</label><h1 id="gnder"></h1>
     <script>
 
-        document.getElementById("names").innerHTML =localStorage.getItem("names");
+        document.getElementById("name").innerHTML =localStorage.getItem("names");
         document.getElementById("email").innerHTML =localStorage.getItem("email");
         document.getElementById("password").innerHTML =localStorage.getItem("password");
+        document.getElementById("number").innerHTML =localStorage.getItem("number");
+        document.getElementById("text").innerHTML =localStorage.getItem("text");
+        document.getElementById("rollno").innerHTML =localStorage.getItem("rollno");
+        document.getElementById("gender").innerHTML =localStorage.getItem("gender");
     </script>
 </body>
 </html>

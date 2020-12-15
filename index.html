@@ -1,42 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-  
+
 </head>
+
 <body>
     <a href="index.html">Sign Up</a>
-    <a href="Signin.html">Sign In</a>
+    <a href="signin.html">Sign In</a>
 
 
 
-    <form class="login" action="#"onsubmit="return signup()">
-Name:<input type="text" id="names" placeholder="Name"><br>
-Email:<input type="email" id="email" placeholder="Email"><br>
-Password:<input type="password" id="password" placeholder="password"><br><br>
-<button >Sign Up</button> <br>
+    <form class="login" action="#" onsubmit="return signup()">
+       <label>Name:</label> <input type="text" id="name" placeholder="Name" required="required"><br>
+       <label>Email:</label> <input type="email" id="email" placeholder="Email" required="required"><br>
+       <label>Password:</label> <input type="password" id="password" placeholder="password" required="required"><br>
+       <label>Age:</label> <input type="number" id="number" placeholder="Enter Your Age" required="required"><br>
+       <label>Nationalty:</label> <input type="text" id="text" placeholder="Nationalty" required="required"><br>
+       <label>Roll No:</label> <input type="number" id="rollno" placeholder="Roll Number" required="required"><br>
+       <label>Gender:</label> <select >
+            <option id="gender">Male</option>
+            <option id="gender">Female</option>
+        </select><br>
+        <button>Sign Up</button> <br>
 
 
 
     </form>
     <script>
-   var names = [];
+        
+        var names = [];
         var emails = [];
         var passwords = [];
+        var numbers = [];
+        var texts = [];
+        var rollnos = [];
+        var genders = [];
+      
+      
+        // var user = {
+        //     names:[],
+        //     emails:[],
+        //     passwords:[],
+        //     numbers:[],
+        //     texts:[],
+        //     rollnos:[],
+        //     genders:[],
+        // }
 
         function signup() {
 
 
-            names.push(document.getElementById("names").value );
+            names.push(document.getElementById("name").value);
             emails.push(document.getElementById("email").value);
             passwords.push(document.getElementById("password").value);
+            numbers.push(document.getElementById("number").value);
+            texts.push(document.getElementById("text").value);
+            rollnos.push(document.getElementById("rollno").value);
+            genders.push(document.getElementById("gender").value);
 
-            localStorage.setItem("names", JSON.stringify(names));
+
+
+            localStorage.setItem("name", JSON.stringify(names));
             localStorage.setItem("email", JSON.stringify(emails));
             localStorage.setItem("password", JSON.stringify(passwords));
+            localStorage.setItem("number", JSON.stringify(numbers));
+            localStorage.setItem("text", JSON.stringify(texts));
+            localStorage.setItem("rollno", JSON.stringify(rollnos));
+            localStorage.setItem("gender", JSON.stringify(genders));
 
             alert("signup success");
 
@@ -44,7 +79,24 @@ Password:<input type="password" id="password" placeholder="password"><br><br>
             return false;
         }
 
+        // var user = {
+        //     name: "Ahmed",
+        //     age: 29,
+        //     rollno: 234,
+        //     nationalty: "Pakistan",
+        //     gender: "Gender",
+        // }
+
 
     </script>
+
+
+
+
+
+
+
+
 </body>
+
 </html>

@@ -8,11 +8,11 @@
     
 </head>
 <body>
-    <a href="index.html">Sign Up</a>
+    <a href="index.html" class="A">Sign Up</a>
     <a href="signin.html">Sign In</a>
     <form class="login" action="#"onsubmit="return login()" >
-        Email:<input type="email" id="email" placeholder="Email"><br>
-        Password:<input type="password" id="password" placeholder="Password"><br>
+        Email:<input type="email" id="email" placeholder="Email" required="required"><br>
+        Password:<input type="password" id="password" placeholder="Password" required="required"><br>
         <button> Sign In</button>
 
 
@@ -21,9 +21,14 @@
 
     </form>
     <script>
-         var names1 = JSON.parse(localStorage.getItem("names"))
+         var names1 = JSON.parse(localStorage.getItem("name"))
         var emails1 = JSON.parse(localStorage.getItem("email"))
         var passwords1 = JSON.parse(localStorage.getItem("password"))
+        var numbers1 = JSON.parse(localStorage.getItem("number"))
+        var texts1 = JSON.parse(localStorage.getItem("text"))
+        var rollno1 = JSON.parse(localStorage.getItem("rollno"))
+        var genders1 = JSON.parse(localStorage.getItem("gender"))
+
 
 
 

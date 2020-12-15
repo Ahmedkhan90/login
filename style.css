@@ -3,7 +3,7 @@
     background-image: url(img/form.jpeg);
     width: 500px;
     margin-left: 30%;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 input{
     width: 500px;
@@ -13,9 +13,9 @@ input{
   outline: none;
   padding: 8px;
   box-sizing: border-box;
-  
+ 
 }
-button{
+button , select {
     margin-left: 150px;
     border: 2px solid #aaa;
   border-radius: 4px;
@@ -25,4 +25,13 @@ button{
   box-sizing: border-box;
   margin-left: 200px;
   
+}
+a{
+ background-color: black;
+ color: white;
+}
+label{
+  color: white;
+  text-decoration: solid;
+  size: larger !important;
 }
